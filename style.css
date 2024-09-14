@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black !important;  /* Ensure background is black */
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+}
+
+.logo {
+    width: 120px; /* Make the logo a bit larger */
+}
+
+.movie-section {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #e50914; /* Netflix Red */
+}
+
+.movie-row {
+    display: flex;
+    overflow-x: scroll;   /* Horizontal scrolling for movie posters */
+    padding-bottom: 20px;
+}
+
+.movie-row::-webkit-scrollbar {
+    display: none;   /* Hide the scrollbar */
+}
+
+.movie {
+    flex: 0 0 auto;  /* Ensure the movie posters stay the same size and don't shrink */
+    width: 300px;    /* Make the movie posters bigger */
+    margin-right: 15px;
+    transition: transform 0.3s;   /* Smooth scaling animation on hover */
+}
+
+.movie img {
+    width: 100%;
+    border-radius: 10px;  /* Round the corners of the movie posters */
+}
+
+.movie:hover {
+    transform: scale(1.15);  /* Scale up movie poster on hover */
+    z-index: 10;             /* Bring the hovered movie poster above others */
+}
